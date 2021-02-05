@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>{% block title %}LOGIN{% endblock %}</title>
+    <title>{% block title %}{{LOGIN}}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}" />
@@ -27,7 +27,7 @@
             <div class="wrap-login100">
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-43">
-						{% block head %} Login {% endblock %}
+						CONNEXION
                     </span> {% block container %}
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
@@ -62,16 +62,15 @@
 
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
-                            {% block login %}
-                            Login
-                            {%endblock%}
+                            Se connecter
 						</button>
                     </div>
 
                     <div class="text-center p-t-46 p-b-20">
                         <span class="txt2">
+                            
                             {% block sign %}
-                            or sign up using
+                            <a href="{% url 'register' %}">creer un compte</a>
                             {%endblock%}
 						</span>
                     </div>
